@@ -35,11 +35,23 @@
 
     <3> spyder 
 
-        进入 spyder 图形界面
+        进入 软件版
 
     <4> ipython
 
         进入 ipython 终端
+
+    <5> jupyter notebook
+
+        打开 网页版 jupyter
+
+    <6> jupyter lab
+
+        打开 网页版 jupyter
+
+    <7> jupyter qtconsole
+
+        打开 简单图形界面版 jupyter 
 
 
 三. 包 管 理 :
