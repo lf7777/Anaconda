@@ -1,0 +1,96 @@
+一. 配 置 环 境 :
+
+    
+    安装 anaconda 等于安装了另一个 python (类似 linux 和 ubuntu 的关系)
+    
+    <1> 到 anaconda 官网进行下载
+
+    <2> bash anaconda... .sh 进行安装,指定自定义目录,不然会安装到root目录.
+
+    <3> 配置环境变量
+
+        vim .bashrc 末尾添加 :
+
+        export PATH="/home/lf/anaconda/bin:$PATH"
+
+        source .bashrc
+
+    <4> 查看版本 
+    
+        conda --version 
+
+    <5> 卸载直接删除原文件即可,并去除掉环境变量
+
+
+二. 使 用 : 
+
+
+    <1> anaconda-navigator
+
+        进入 导航图形界面
+
+    <2> python 
+
+        可以通过 python 直接运行 anaconda 终端 
+
+    <3> spyder 
+
+        进入 spyder 图形界面
+
+    <4> ipython
+
+        进入 ipython 终端
+
+
+三. 包 管 理 :
+
+    
+    <1> conda install package_name
+
+        安装包 (如果不使用 install -n 则被安装在当前环境)
+
+    <2> conda list
+
+        列出安装的包
+
+    <3> conda search 
+
+        查看 package 信息
+
+        conda search numpy
+
+    <4> conda update conda
+
+        更新 conda
+
+    <5> conda update anaconda
+
+        更新 anaconda
+
+    <6> conda update python
+
+        更新 当前环境的 python 版本
+
+
+
+四. 问 题 及 解 决 :
+
+
+    <1> 安装conda后取消命令行前出现的base，取消每次启动自动激活conda的基础环境
+
+ 
+        (1) 方 法 一 ：
+
+            每次在命令行通过conda deactivate退出base环境回到系统自动的环境
+
+        (2) 方 法 二 :
+
+            1.通过将auto_activate_base参数设置为false实现 :
+
+            conda config --set auto_activate_base false
+
+            2.那要进入的话通过conda activate base
+
+            3.如果反悔了还是希望base一直留着的话通过
+            
+            conda config --set auto_activate_base true来恢复
